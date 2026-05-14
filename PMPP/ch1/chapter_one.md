@@ -6,9 +6,9 @@ Would've been better if the Duke Library had the 5th Edition, but alas.
 ### Start
 
 - Microprocessors originally targeted strong single-thread (sequential) performance, though modern CPUs are multicore and run many threads (e.g. Intel & AMD x86)
-- *FLOPS: Floating-Point Operations Per-Second. A throughput metric for floating-point compute capability*
+- *FLOPS: Floating-Point Operations Per-Second, how many floating-point calculations a processor can do each second*
 - *Clock Frequency: How many cycles a CPU performs per-second*
-- Energy consumption & heat dissipation issues limited clock frequency and calculations per-cycle, leading to multicore chips that use multiple processing cores to increase total processing power
+- Energy consumption and heat dissipation limited clock-frequency gains, so chip designers moved to placing multiple physical CPU cores on each chip to increase total processing power.
 - To leverage this new model, we need multiple instruction sequences whether from the same application or different applications that can simultaneously execute on all of these cores
 - *Von Neumann Architecture: Computer design where instructions and data are stored in the same memory space. This means the CPU fetches both instructions and data from the same memory, using the same pathways. Typically consists of three main components: CPU, memory, and I/O devices* -> definition from Geeksforgeeks
 - The vast majority of software applications are written as sequential programs that are executed by processors whose design was envisioned by von Neumann
@@ -19,8 +19,8 @@ Would've been better if the Duke Library had the 5th Edition, but alas.
 1. Multicore CPUs. Strong emphasis on low-latency execution and high single-thread performance, while still supporting parallel execution across cores.
 2. Many-thread GPUs. Strong emphasis on high throughput by running many threads/tasks at once.
 - Reasons for the peak performance gap between multicore & multithread-focused architectures:
-1. Reducing latency (common CPU focus) is much more expensive than increasing throughput (common GPU focus) in terms of power & chip area. CPUs spend more transistors on low-latency control logic and caching, while GPUs spend more on arithmetic throughput.
-2. Memory system design. GPUs are built for very high-bandwidth parallel memory access, while CPUs are tuned for low-latency access patterns and general-purpose workloads.
+1. Reducing latency (common CPU focus) is much more expensive than increasing throughput (common GPU focus) in terms of power & chip area. CPUs spend more chip area on low-latency control logic and caching, while GPUs spend more on arithmetic throughput.
+2. Memory system design. GPUs are built for very high-bandwidth parallel memory access, while CPUs are built for low-latency access patterns and general-purpose workloads.
 - *Amdahl's Law: The level of speedup achievable is limited by the parallelizable portion of the application*
 - Challenges of parallelization:
 1. Many real-world problems are naturally sequential, and parallelizing them is non-trivial

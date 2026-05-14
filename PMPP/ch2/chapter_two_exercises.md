@@ -12,6 +12,6 @@
     c. 1563
     d. All  200064
     e. 200064 - 200000 = 64
-10.
+10. Use __host__ __device__, you can declare functions with both qualifiers at the same time
 
 1,2,3, 9d were hard..need to revisit
